@@ -30,7 +30,7 @@ get.addEventListener("click", function () {
 // Function to generate password
 function generatePassword() {
     
-    enter = parseInt(prompt("How long would you like your password to be? Choose between 8 and 16."));
+    enter = parseInt(prompt("How long would you like your password to be? Choose between 8 and 128."));
 
     if (!enter) {
         alert("This requires a numerical value.");
@@ -38,9 +38,9 @@ function generatePassword() {
     
     } 
     
-    else if (enter < 8 || enter > 16) {
+    else if (enter < 8 || enter > 128) {
        
-        enter = parseInt(prompt("Password must be between 8 and 16."));
+        enter = parseInt(prompt("Password must be between 8 and 128."));
         generatePassword();
 
     } 
